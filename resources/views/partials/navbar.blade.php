@@ -1,26 +1,62 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container">
-    <a class="navbar-brand" href="/">Pelayanan K3</a>
+<!-- resources/views/components/navbar.blade.php (Bootstrap Version) -->
+<nav class="navbar navbar-expand-lg" style="background-color:#143D66; font-family: 'Poppins', sans-serif;">
+    <div class="container-fluid px-4 py-2">
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+        <!-- Logo & Text -->
+        <div class="d-flex align-items-center">
+            <img src="/images/logo.png" alt="Logo" style="height:50px;" class="me-3">
+            <div class="text-white lh-1">
+                <div style="font-size:12px;">Direktorat Jenderal Pembinaan</div>
+                <div style="font-size:12px;">Pengawasan Ketenagakerjaan dan K3</div>
+                <div style="font-size:16px; font-weight:600;">Balai K3 Surabaya</div>
+            </div>
+        </div>
 
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item">
-          <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" href="/">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Layanan</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Informasi</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/kontak">Kontak</a>
-        </li>
-      </ul>
+        <!-- Toggler -->
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+        </button>
+
+        <!-- Navbar Menu -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav align-items-center gap-3" style="font-size:18px; font-weight:500;">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/">Beranda</a>
+                </li>
+
+                <!-- Pelayanan Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">Pelayanan</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Menu 1</a></li>
+                        <li><a class="dropdown-item" href="#">Menu 2</a></li>
+                    </ul>
+                </li>
+
+                <!-- Tentang Kami Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">Tentang Kami</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Profil</a></li>
+                        <li><a class="dropdown-item" href="#">Struktur</a></li>
+                    </ul>
+                </li>
+
+                <!-- Kontak -->
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/kontak">Kontak</a>
+                </li>
+
+                <!-- Notification Icon -->
+                <li class="nav-item">
+                    <a href="#" class="text-white fs-4">🔔</a>
+                </li>
+
+                <!-- User Icon -->
+                <li class="nav-item">
+                    <a href="#" class="text-white fs-4">👤</a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </div>
 </nav>
