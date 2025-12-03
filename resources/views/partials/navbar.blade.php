@@ -1,5 +1,8 @@
 <!-- resources/views/components/navbar.blade.php (Bootstrap Version) -->
-<nav class="navbar navbar-expand-lg" style="background-color:#143D66; font-family: 'Poppins', sans-serif;">
+<nav class="navbar navbar-expand-lg" style="background-color:#15406A; ">
+    <!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <div class="container-fluid px-4 py-2">
 
         <!-- Logo & Text -->
@@ -25,12 +28,8 @@
                 </li>
 
                 <!-- Pelayanan Dropdown -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">Pelayanan</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Menu 1</a></li>
-                        <li><a class="dropdown-item" href="#">Menu 2</a></li>
-                    </ul>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="daftar_pelayanan">Pelayanan</a>
                 </li>
 
                 <!-- Tentang Kami Dropdown -->
@@ -48,13 +47,13 @@
                 </li>
 
                 <!-- Notification Icon -->
-                <li class="nav-item">
-                    <a href="#" class="text-white fs-4">🔔</a>
+               <i class="bi bi-house-door-fill" style="color: ffffff;"></i>
+                    <a href="#" class="text-white fs-4"></a>
                 </li>
 
                 <!-- User Icon -->
-                <li class="nav-item">
-                    <a href="#" class="text-white fs-4">👤</a>
+                <i class="bi bi-person-circle" style="color: #ffffff;"></i>
+                    <a href="#" class="text-white fs-4"></a>
                 </li>
             </ul>
         </div>
