@@ -36,8 +36,10 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">Tentang Kami</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Profil</a></li>
-                        <li><a class="dropdown-item" href="#">Struktur</a></li>
+                        <li><a class="dropdown-item" href="/visi_misi">Visi & Misi</a></li>
+                        <li><a class="dropdown-item" href="/struktur">Struktur Organisasi</a></li>
+                        <li><a class="dropdown-item" href="/alur_pelayanan">Alur Pelayanan</a></li>
+                         <li><a class="dropdown-item" href="/sarana_prasarana">Sarana Prasarana</a></li>
                     </ul>
                 </li>
 
