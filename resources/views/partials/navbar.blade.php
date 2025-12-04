@@ -1,5 +1,5 @@
 <!-- resources/views/components/navbar.blade.php (Bootstrap Version) -->
-<nav class="navbar navbar-expand-lg" style="background-color:#15406A; ">
+<nav class="navbar navbar-expand-lg" style="background-color:#15406A; font-family: 'Poppins', sans-serif;">
     <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
