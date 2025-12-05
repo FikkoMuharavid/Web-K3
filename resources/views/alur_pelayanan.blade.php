@@ -53,7 +53,7 @@
         </a>
 
         {{-- Gambar full tampilan visi misi --}}
-        <img src="{{ asset('images/visimisi.png') }}" alt="Visi Misi Balai K3" class="visi-img">
+        <img src="{{ asset('images/alurpelayanan.jpg') }}" alt="Alur Pelayanan Balai K3" class="visi-img">
 
     </div>
 </div>

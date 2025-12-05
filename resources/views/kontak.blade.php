@@ -114,6 +114,7 @@
     /* Menonjolkan card dengan radius lebih halus */
     .card {
         border-radius: 12px;
+        font-family: 'Poppins', sans-serif;
     }
 
     /* Jika ingin border biru di textarea seperti screenshot */
@@ -121,8 +122,5 @@
         box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25); /* default bootstrap blue focus */
     }
 </style>
-
-<i class="bi bi-house-door-fill" style="color: blue;"></i>
-<i class="bi bi-person-circle" style="color: #007bff;"></i>
 
 @endsection
