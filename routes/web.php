@@ -25,10 +25,8 @@ Route::middleware('guest')->group(function () {
     Route::get('/reset-password/{token}', [PasswordResetController::class, 'resetForm'])->name('password.reset');
     // Route::post('/reset-password', [PasswordResetController::class, 'updatePassword'])->name('password.update');
     // Route::post('reset-password', [PasswordResetController::class, 'reset'])->name('password.update');
-Route::post('reset-password', [PasswordResetController::class, 'updatePassword'])
+    Route::post('reset-password', [PasswordResetController::class, 'updatePassword'])
     ->name('password.update');
-
-
 
     Route::view('/kontak', 'kontak');
     Route::view('/daftar_pelayanan', 'daftar_pelayanan');
@@ -41,14 +39,7 @@ Route::post('reset-password', [PasswordResetController::class, 'updatePassword']
 // ---------- PROTECTED ROUTES ----------
 Route::middleware('auth')->group(function () {
     // Route::get('home', [HomeController::class,'index']); 
-    Route::view('/kontak', 'kontak');
-    Route::view('/daftar_pelayanan', 'daftar_pelayanan');
-    Route::view('/visi_misi', 'visi_misi');
-    Route::view('/alur_pelayanan', 'alur_pelayanan');
-    Route::view('/struktur', 'struktur');
-    Route::view('/sarana_prasarana', 'sarana_prasarana');
 
-    
     // Logout
     Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 });
