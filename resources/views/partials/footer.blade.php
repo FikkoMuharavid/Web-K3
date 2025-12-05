@@ -1,5 +1,5 @@
 {{-- resources/views/components/footer.blade.php --}}
-<footer class="text-white mt-5 py-4" style="background-color:#15406A;">
+<footer class="text-white mt-5 py-4" style="background-color:#15406A; font-family: 'Poppins', sans-serif;">
     <div class="container">
         <div class="row gy-4">
 
