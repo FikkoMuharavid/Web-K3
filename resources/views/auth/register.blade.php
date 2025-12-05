@@ -80,13 +80,25 @@
 
                 <h2 class="fw-bold text-center mb-4" style="color:#143D66;">Daftar</h2>
 
-                <form action="">
+                                    @if($errors->any())
+                        <div class="alert alert-danger">
+                            <ul class="mb-0">
+                                @foreach($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                    
+                <form action="{{ url('register') }}" method="POST">
+                 @csrf
+
                     
 
                     <!-- Username -->
                     <div class="mb-3">
                         <label class="form-label">Username</label>
-                        <input type="text" name="username" class="form-control" placeholder="Masukkan username" required>
+                        <input type="text" name="name" class="form-control" placeholder="Masukkan username" required>
                     </div>
 
                     <!-- Email -->
@@ -119,7 +131,17 @@
                          <span>Sudah punya akun? <a href="/login" style="color:#143D66; font-weight:600;">Masuk</a></span>
                     </div>
 
-                    <button type="submit" class="btn-submit">Daftar</button>
+                    <div class="mb-3">
+                        {!! NoCaptcha::display() !!}
+                        @error('g-recaptcha-response')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                    </div>
+
+                    {!! NoCaptcha::renderJs() !!}
+
+                    <button type="submit" class="btn btn-primary w-100">Daftar</button>
+
 
                 </form>
 

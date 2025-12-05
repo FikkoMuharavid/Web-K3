@@ -115,6 +115,24 @@
         .btn:hover {
             opacity: .9;
         }
+
+        
+        .alert {
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .alert.success {
+            background: #e1f8e6;
+            color: #098326;
+        }
+
+        .alert.error {
+            background: #fbe4e4;
+            color: #d0342c;
+        }
     </style>
 
 </head>
@@ -137,14 +155,29 @@
             <div class="title">Lupa Kata Sandi</div>
             <div class="subtitle">Masukkan email anda untuk mengubah kata sandi</div>
 
-            <form method="">
-               
+            {{-- SUCCESS MESSAGE --}}
+            @if(session('success'))
+                <div class="alert success">
+                    {{ session('success') }}
+                </div>
+            @endif
+
+            {{-- ERROR MESSAGE --}}
+            <div class="mb-3">
+            @if($errors->any())
+                <span class="text-danger">{{ $errors->first() }}</span>
+            @endif  
+            </div>
+
+            <form method="POST" action="{{ route('password.email') }}">
+                @csrf
 
                 <label>Email</label>
                 <input type="email" name="email" placeholder="Masukkan email" required>
 
                 <button type="submit" class="btn">Reset Password</button>
             </form>
+
         </div>
 
     </div>

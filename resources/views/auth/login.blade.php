@@ -75,7 +75,19 @@
 
                 <h2 class="text-center login-title mb-4">Masuk</h2>
 
-                <form action="">
+                <form action="{{ url('login') }}" method="POST">
+                @csrf
+
+                @if($errors->any())
+                    <div class="alert alert-danger">
+                        <ul class="mb-0">
+                            @foreach($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+
 
                     {{-- Email --}}
                     <label class="mb-1 fw-semibold">Email</label>
@@ -102,12 +114,23 @@
                            <a href="/register" class="fw-bold text-decoration-none"
                                style="color:#143D66;">Daftar</a>
                         </div>
-                        <a href="/forget" class="fw-bold text-decoration-none"
+                        <a href="/forgot-password" class="fw-bold text-decoration-none"
                            style="color:#143D66;">Lupa Password?</a>
                     </div>
 
+                    <div class="mb-3">
+                        {!! NoCaptcha::display() !!}
+                        @error('g-recaptcha-response')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                    </div>
+
+                    {!! NoCaptcha::renderJs() !!}
+
+
                     {{-- Button --}}
                     <button type="submit" class="btn btn-login w-100">Masuk</button>
+                    
 
                 </form>
             </div>
