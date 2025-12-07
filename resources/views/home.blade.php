@@ -731,7 +731,7 @@
 
                         {{-- Tombol Kirim --}}
                         <div class="text-center">
-                            <button type="submit" class="btn btn-primary px-5">
+                            <button type="submit" class="btn btn-light px-5">
                                 Kirim
                             </button>
                         </div>
@@ -794,14 +794,17 @@
         font-family: 'Poppins', sans-serif;
     }
 
+    /* Ubah warna seluruh font */
+    body, .card, .card * {
+        color: #15406A !important;
+    }
+
     /* Jika ingin border biru di textarea seperti screenshot */
     textarea.form-control.border-primary:focus {
-        box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25); /* default bootstrap blue focus */
+        box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
     }
 </style>
 </body>
-
-
 </html>
 
 
