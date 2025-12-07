@@ -57,7 +57,7 @@
                 @auth
                     {{-- Notification --}}
                     <li class="nav-item">
-                        <a href="#" class="btn btn-outline-light position-relative">
+                        <a href="/notifikasi" class="btn btn-outline-light position-relative">
                             <i class="bi bi-bell-fill"></i>
                             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                 3

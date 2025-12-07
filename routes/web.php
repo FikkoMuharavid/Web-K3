@@ -34,6 +34,8 @@ Route::middleware('guest')->group(function () {
     Route::view('/alur_pelayanan', 'alur_pelayanan');
     Route::view('/struktur', 'struktur');
     Route::view('/sarana_prasarana', 'sarana_prasarana');
+    Route::view('/keranjang', 'keranjang');
+    Route::view('/notifikasi', 'notifikasi');
 });
 
 // ---------- PROTECTED ROUTES ----------
